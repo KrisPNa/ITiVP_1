@@ -1,1 +1,10 @@
 AddDefaultCharset UFT-8
+
+# .htaccess
+DirectoryIndex index.php index.html
+
+# Если нужно принудительно использовать PHP
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ index.php [L]
+</IfModule>
